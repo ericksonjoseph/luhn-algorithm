@@ -3,5 +3,8 @@
         "psr-4": {
             "EricksonJoseph\\": "src/"
         }
+    },
+    "require": {
+        "phpunit/phpunit": "5"
     }
 }

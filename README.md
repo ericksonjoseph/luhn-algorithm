@@ -6,6 +6,12 @@ http://en.wikipedia.org/wiki/Luhn_algorithm
 
 ## Usage
 
+Install dependencies
+
+```
+composer install
+```
+
 Run the algorithm passing in the desired input as the first argument:
 
 ```
