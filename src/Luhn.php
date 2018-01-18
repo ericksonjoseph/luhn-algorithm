@@ -6,6 +6,8 @@ class Luhn {
 
     public function isValid($input) {
 
+        $this->validateInput($input);
+
         $total = 0;
         $parity = 1;
 
@@ -22,5 +24,11 @@ class Luhn {
         }
 
         return $total % 10 === 0;
+    }
+
+    private function validateInput($input) {
+        if (!is_numeric($input) || intval($input) < 0) {
+            throw new \InvalidArgumentException("Expected an unsigned number");
+        }
     }
 }
