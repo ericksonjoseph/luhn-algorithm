@@ -2,7 +2,7 @@
 
 namespace EricksonJoseph;
 
-require_once('Luhn.php');
+require_once('./vendor/autoload.php');
 
 $input = $argv[1];
 
