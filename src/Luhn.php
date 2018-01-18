@@ -9,24 +9,18 @@ class Luhn {
         $total = 0;
         $parity = 1;
 
-        for ($i=strlen($input); $i > 0; $i--) {
+        for ($i=strlen($input)-1; $i >= 0; $i--) {
 
-            $number = substr($input, ($i-1), 1);
+            $number = substr($input, $i, 1);
 
-            $parity = $parity ^ 1;
-
-            if ($parity) {
+            if ($parity ^= 1) {
                 $double = $number << 1;
-                if ($double > 9) {
-                    $double -= 9;
-                }
-                $number = $double;
-            } else {
+                $number = ($double > 9) ? $double -= 9 : $double;
             }
 
             $total += $number;
         }
 
-        return $total % 10 == 0;
+        return $total % 10 === 0;
     }
 }
