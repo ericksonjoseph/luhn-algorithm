@@ -17,3 +17,9 @@ Run the algorithm passing in the desired input as the first argument:
 ```
 php index.php 79927398713
 ```
+
+Run the unit tests
+
+```
+composer test
+```
